@@ -529,7 +529,8 @@ int main(int argc, char** argv) {
     copy_userdata_files();
     android::base::SetProperty("service.adb.root", "1");
   }
-
+  
+  device->InitDevice();
   Device::BuiltinAction next_recovery_action = Device::NO_ACTION;
 
   while (true) {
